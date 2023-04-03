@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+<body>
+    <h1>Insira as coordenadas:</h1>
+    <form action="/coordenada", method="post">
+        <input type="text" id="x" name="x" placeholder="coordenada x">
+        <br>
+        <input type="text" id="y" name="y" placeholder="coordenada y">
+        <br>
+        <input type="text" id="z" name="z" placeholder="coordenada z">
+        <br>
+        <button type="submit" value="Submit">Enviar</button>
+    </form>
+    <br>
+    <h2>Coordenada Atual: </h2>
+        <p>( {{x_new}}, {{y_new}}, {{z_new}} )</p>
+
+    <!-- <h2>Delocamento</h2>
+        <p>( {{x_deslocamento}}, {{y_deslocamento}}, {{z_deslocamento}} )</p> -->
+
+    <!-- <h2>Última Coordenada:</h2>
+        <p>({{x}}, {{y}}, {{z}})</p> -->
+</body>
+</html>
