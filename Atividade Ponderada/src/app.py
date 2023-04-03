@@ -12,7 +12,6 @@ session = Session()
 Base.metadata.create_all(engine)
 
 
-
 # Rotas
 app = Flask(__name__)
 
@@ -22,19 +21,31 @@ def home():
 
 @app.route("/coordenada", methods = ["POST"])
 def coordenada():
-    # x_old = x_new
-    # y_old = y_new
-    # z_old = z_new
-    x_new = request.form['x']
-    y_new = request.form['y']
-    z_new = request.form['z']
-    # x_deslocamento = x_old - x_new
-    # y_deslocamento = y_old - y_new
-    # z_deslocamento = z_old - z_new
-    coord = Coordenada(x_db = x_new, y_db = y_new, z_db = z_new)
+
+    # Recebendo informaçõe sno formulário
+    x = request.form['x']
+    y = request.form['y']
+    z = request.form['z']
+
+    coord = Coordenada(x_db = x, y_db = y, z_db = z)
     session.add(coord)
     session.commit()
-    return render_template("index.html", x_new=x_new, y_new=y_new, z_new=z_new)
+    return render_template("index.html", x_new=x, y_new=y, z_new=z)
+
+@app.route("/godot", methods = ["GET", "POST"])
+def godot():
+
+    # Fazendo requisições pro db e retornando pro front, para que o godot possa ler
+    posicoes = session.query(Coordenada).all()
+    
+    x = posicoes[-1].x_db
+    y = posicoes[-1].y_db
+    z = posicoes[-1].z_db
+
+    stringposicoes = f"{x},{y},{z}"
+
+    return stringposicoes
+    
 
 if __name__ == "__main__":
     app.run(debug=True)

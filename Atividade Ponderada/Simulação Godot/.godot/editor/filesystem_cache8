@@ -1,0 +1,7 @@
+2a60927148abd1d33b818b535e306557
+::res://::1680532437
+default_env.tres::Environment::-1::1680532425::0::1::::<><>::
+HTTPRequest.gd::GDScript::-1::1680532425::0::1::::<>HTTPRequest<>::
+HTTPRequest.tscn::PackedScene::-1::1680532425::0::1::::<><>::res://HTTPRequest.gd
+icon.png::CompressedTexture2D::3918629885652257503::1680122750::1680532438::1::::<><>::
+Node.tscn::PackedScene::-1::1680532425::0::1::::<><>::res://HTTPRequest.tscn

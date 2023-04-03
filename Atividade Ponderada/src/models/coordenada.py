@@ -1,6 +1,7 @@
 from models.base import Base
 from sqlalchemy import Column, Integer, String
 
+# Criando a classe com o nome da tabela, as chaves e suas respectivas tipagens
 class Coordenada(Base):
     __tablename__ = "Coordenada"
     id = Column(Integer, primary_key = True)

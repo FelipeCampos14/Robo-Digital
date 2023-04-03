@@ -7,6 +7,7 @@
     <title>Atividade</title>
 </head>
 <body>
+    <!-- formulário para fazer um post para o back -->
     <h1>Insira as coordenadas:</h1>
     <form action="/coordenada", method="post">
         <input type="text" id="x" name="x" placeholder="coordenada x">
@@ -18,13 +19,9 @@
         <button type="submit" value="Submit">Enviar</button>
     </form>
     <br>
+    <!-- Integração com o front -->
     <h2>Coordenada Atual: </h2>
         <p>( {{x_new}}, {{y_new}}, {{z_new}} )</p>
 
-    <!-- <h2>Delocamento</h2>
-        <p>( {{x_deslocamento}}, {{y_deslocamento}}, {{z_deslocamento}} )</p> -->
-
-    <!-- <h2>Última Coordenada:</h2>
-        <p>({{x}}, {{y}}, {{z}})</p> -->
 </body>
 </html>
